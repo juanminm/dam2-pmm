@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CalculadoraSimple</string>
+    <string name="activity_main_txt_num1">Nº 1</string>
+    <string name="activity_main_txt_num2">Nº 2</string>
+    <string name="activity_main_txt_suma">Suma</string>
+    <string name="activity_main_txt_resta">Resta</string>
+    <string name="activity_main_txt_resultado">Resultado:</string>
+    <string name="activity_main_hint_num1">0.0</string>
+    <string name="activity_main_hint_num2">0.0</string>
+    <string name="activity_main_hint_resultado">0.0</string>
+</resources>

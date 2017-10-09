@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EjercicioLayouts</string>
+    <string name="go_to_grid_layout_activity">Ir a actividad Diseño Rejilla</string>
+    <string name="go_to_linear_layout_activity">Ir a actividad Diseño Linear</string>
+    <string name="go_to_relative_layout_activity">Ir a actividad Diseño Relativo</string>
+    <string name="go_to_table_layout_activity">Ir a actividad Diseño Tabla</string>
+    <string name="grid_layout_label">Diseño Rejilla</string>
+    <string name="linear_layout_label">Diseño Linear</string>
+    <string name="relative_layout_label">Diseño Relativo</string>
+    <string name="table_layout_label">Diseño Tabla</string>
+    <string name="back_to_main">Volver a Principal</string>
+    <string name="test_checkbox">Checkbox de prueba</string>
+    <string name="test_label">Etiqueta de prueba</string>
+</resources>

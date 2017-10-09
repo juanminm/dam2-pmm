@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LayoutsExercice</string>
+    <string name="go_to_grid_layout_activity">Go to Grid Layout activity</string>
+    <string name="go_to_linear_layout_activity">Go to Linear Layout activity</string>
+    <string name="go_to_relative_layout_activity">Go to Relative Layout activity</string>
+    <string name="go_to_table_layout_activity">Go to Table Layout activity</string>
+    <string name="grid_layout_label">Grid Layout</string>
+    <string name="linear_layout_label">Linear Layout</string>
+    <string name="relative_layout_label">Relative Layout</string>
+    <string name="table_layout_label">Table Layout</string>
+    <string name="back_to_main">Back to Main</string>
+    <string name="test_checkbox">Test Checkbox</string>
+    <string name="test_label">Test Label</string>
+</resources>

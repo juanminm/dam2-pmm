@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="org.institutoserpis.juanminm.ejerciciolayouts.MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/botonALinear_img"
+        android:src="@drawable/linear_layout"
+        android:layout_width="135dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/go_to_linear_layout_activity"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="91dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/linear_layout_label"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:layout_below="@+id/botonALinear_img"
+        android:layout_alignLeft="@+id/botonALinear_img"
+        android:layout_alignRight="@+id/botonALinear_img"
+        android:id="@+id/textView" />
+
+    <ImageButton
+        android:id="@+id/botonATable_img"
+        android:src="@drawable/table_layout"
+        android:layout_width="135dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/go_to_table_layout_activity"
+        android:layout_alignTop="@+id/botonALinear_img"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/table_layout_label"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:layout_below="@+id/botonATable_img"
+        android:layout_alignLeft="@+id/botonATable_img"
+        android:layout_alignRight="@+id/botonATable_img" />
+
+    <ImageButton
+        android:id="@+id/botonARelative_img"
+        android:src="@drawable/relative_layout"
+        android:layout_width="135dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/go_to_relative_layout_activity"
+        android:layout_marginTop="57dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/relative_layout_label"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:layout_below="@+id/botonARelative_img"
+        android:layout_alignLeft="@+id/botonARelative_img"
+        android:layout_alignRight="@+id/botonARelative_img" />
+
+    <ImageButton
+        android:id="@+id/botonAGrid_img"
+        android:src="@drawable/table_layout"
+        android:layout_width="135dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/go_to_grid_layout_activity"
+        android:layout_alignTop="@+id/botonARelative_img"
+        android:layout_alignLeft="@+id/botonATable_img"
+        android:layout_alignStart="@+id/botonATable_img" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/grid_layout_label"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:layout_below="@+id/botonAGrid_img"
+        android:layout_alignLeft="@+id/botonAGrid_img"
+        android:layout_alignRight="@+id/botonAGrid_img" />
+
+
+</RelativeLayout>
