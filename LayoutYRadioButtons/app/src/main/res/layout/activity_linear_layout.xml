@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="org.institutoserpis.juanminm.layoutyradiobuttons.LinearLayoutActivity"
-    android:background="#000">
+    android:background="@color/black">
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -18,22 +18,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rojo"
-            android:buttonTint="#FFF"
-            android:textColor="#FFF" />
+            android:buttonTint="@color/white"
+            android:textColor="@color/white" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Blanco "
-            android:buttonTint="#FFF"
-            android:textColor="#FFF" />
+            android:buttonTint="@color/white"
+            android:textColor="@color/white" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Azul"
-            android:buttonTint="#FFF"
-            android:textColor="#FFF" />
+            android:buttonTint="@color/white"
+            android:textColor="@color/white" />
     </RadioGroup>
 
     <LinearLayout
@@ -57,5 +57,5 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFF"/>
+        android:background="@color/white"/>
 </LinearLayout>

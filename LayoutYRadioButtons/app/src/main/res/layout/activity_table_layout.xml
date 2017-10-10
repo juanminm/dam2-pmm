@@ -4,24 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000"
+    android:background="@color/black"
     tools:context="org.institutoserpis.juanminm.layoutyradiobuttons.TableLayoutActivity">
     <TableRow>
         <Button
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:text="Color 1"
-            android:textColor="#F00"/>
+            android:textColor="@color/red"/>
+
         <Button
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:text="Color 2"
-            android:textColor="#FF0"/>/>
+            android:textColor="@color/yellow"/>
+
         <Button
             android:layout_weight="2"
             android:layout_height="wrap_content"
             android:text="Color 3"
-            android:textColor="#00F" />
+            android:textColor="@color/blue" />
     </TableRow>
     <TableRow
         android:layout_width="match_parent">
@@ -30,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_weight="4"
-            android:background="#FF0"/>
+            android:background="@color/yellow" />
     </TableRow>
     <TableRow>
         <Button
@@ -38,7 +40,6 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_weight="1"
-            android:text="Clear"
-            />
+            android:text="Clear" />
     </TableRow>
 </TableLayout>
