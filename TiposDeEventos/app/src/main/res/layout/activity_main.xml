@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.institutoserpis.juanminm.tiposdeeventos.MainActivity">
+
+    <org.institutoserpis.juanminm.tiposdeeventos.MiButton
+        android:id="@+id/activity_main_boton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uno"/>
+
+    <Button
+        android:id="@+id/activity_main_boton2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Dos"
+        android:onClick="cmdDos_click"/>
+
+    <Button
+        android:id="@+id/activity_main_boton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tres" />
+
+</android.support.constraint.ConstraintLayout>
