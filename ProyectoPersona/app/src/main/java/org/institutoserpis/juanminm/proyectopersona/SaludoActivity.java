@@ -17,7 +17,8 @@ public class SaludoActivity extends AppCompatActivity {
         Bundle bundle = intent.getExtras();
 
         String mensajeSaludo = "";
-        Persona nombre = (Persona) bundle.getSerializable("PERSONA");
+        //Persona nombre = (Persona) bundle.getSerializable("PERSONA");
+        Persona nombre = bundle.getParcelable("PARCEL");
 
         mensajeSaludo += "Saludos, " + nombre.toString();
 

@@ -2,6 +2,7 @@ package org.institutoserpis.juanminm.proyectopersona;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
     final static String SEXO = "org.institutoserpis.juanminm.proyectopersona.SEXO";
 
     private Persona[] datos = new Persona[]{
-            new Persona("Jorge", "Rodrigo Anchon", 32, 'h'),
-            new Persona("Maria", "Sanchez Estela", 25, 'm'),
-            new Persona("Sergio", "Lopez Vela", 27, 'h')
+            new Persona("Jorge", "Rodrigo Anchon", 32, "h"),
+            new Persona("Maria", "Sanchez Estela", 25, "m"),
+            new Persona("Sergio", "Lopez Vela", 27, "h")
     };
 
     @Override
@@ -50,10 +51,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SaludoActivity.class);
         Bundle bundle = new Bundle();
 
-//        bundle.putString(NOMBRE, persona.getNombre());
-//        bundle.putString(APELLIDOS, persona.getApellidos());
-//        bundle.putChar(SEXO, persona.getSexo());
-        bundle.putSerializable("PERSONA", persona);
+        //bundle.putString(NOMBRE, persona.getNombre());
+        //bundle.putString(APELLIDOS, persona.getApellidos());
+        //bundle.putChar(SEXO, persona.getSexo());
+        //bundle.putSerializable("PERSONA");
+        bundle.putParcelable("PARCEL", persona);
 
         intent.putExtras(bundle);
 
