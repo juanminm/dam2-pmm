@@ -66,13 +66,14 @@
         android:layout_marginStart="8dp"
         android:padding="20dp"
         app:layout_constraintLeft_toLeftOf="parent">
+
         <RadioButton
             android:id="@+id/activity_main_rb_suma"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/activity_main_txt_suma"/>
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/activity_main_txt_suma" />
         <RadioButton
             android:id="@+id/activity_main_rb_resta"
             android:layout_width="wrap_content"
