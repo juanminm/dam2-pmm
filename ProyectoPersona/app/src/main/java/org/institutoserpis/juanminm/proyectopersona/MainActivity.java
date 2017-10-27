@@ -7,12 +7,16 @@ import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -55,6 +59,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //Alternativa 1
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.MnuOpc1:
+                Toast.makeText(this, "Opcion 1", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.MnuOpc2:
+                Toast.makeText(this, "Opcion 2", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.MnuOpc3:
+                Intent intent = new Intent(this, AcercaDeActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }}
 
     private void sendInfoToActivity(Persona persona) {
         Intent intent = new Intent(this, SaludoActivity.class);

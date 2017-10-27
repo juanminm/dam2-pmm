@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ProyectoPersona</string>
+    <string translatable="false" name="app_version_number">0.1</string>
+    <string translatable="false" name="app_author_list">Juan Miguel Navarro Martínez</string>
+    <string translatable="false" name="app_sourcecode_url">https://github.com/juanminm/2dam-pmm</string>
+
+    <string name="app_about">Acerca de&#160;</string>
+    <string name="app_version">Versión:&#160;</string>
+    <string name="app_authors">Autor:&#160;</string>
+    <string name="app_sourcecode">Código fuente:&#160;</string>
+
 </resources>
