@@ -12,7 +12,7 @@
             android:id="@+id/tvApellidos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Navarro Martínez"
+            tools:text="Doe"
             android:textColor="#000000"
             />
 
@@ -20,7 +20,7 @@
             android:id="@+id/tvNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Juan Miguel"
+            tools:text="John"
             />
 
     </LinearLayout>
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:textSize="25sp"
         android:layout_marginLeft="10dp"
-        tools:text="25"/>
+        tools:text="23"/>
 
     <LinearLayout
         android:layout_width="match_parent"
