@@ -21,9 +21,9 @@ public class AcercaDeActivity extends AppCompatActivity {
         autores = (TextView) findViewById(R.id.activity_acercade_autores);
         repositorio = (TextView) findViewById(R.id.activity_acercade_codigofuente);
 
-        acercaDe.setText(getString(R.string.app_about) + getString(R.string.app_name));
-        version.setText(getString(R.string.app_version) + getString(R.string.app_version_number));
-        autores.setText(getString(R.string.app_authors) + getString(R.string.app_author_list));
-        repositorio.setText(getString(R.string.app_sourcecode) + getString(R.string.app_sourcecode_url));
+        acercaDe.setText(String.format(getString(R.string.app_about), getString(R.string.app_name)));
+        version.setText(String.format(getString(R.string.app_version), getString(R.string.app_version_number)));
+        autores.setText(String.format(getString(R.string.app_authors), getString(R.string.app_author_list)));
+        repositorio.setText(String.format(getString(R.string.app_sourcecode), getString(R.string.app_sourcecode_url)));
     }
 }
