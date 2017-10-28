@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void cmdDos_click() {
+    public void cmdDos_click(View view) {
         Toast.makeText(ctx, "Pulsando boton Dos", Toast.LENGTH_SHORT).show();
     }
 }
