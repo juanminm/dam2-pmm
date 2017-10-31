@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -12,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,11 +29,16 @@ public class MainActivity extends AppCompatActivity {
 
     private Persona[] datos = new Persona[1000];
 
+    Button boton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        boton = (Button)findViewById(R.id.boton);
+
+        registerForContextMenu(boton);
 
         for (int i = 0; i < datos.length; i++) {
             Random random = new Random();
@@ -73,6 +81,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.MnuOpc2:
                 Toast.makeText(this, "Opcion 2", Toast.LENGTH_SHORT).show();
                 return true;
+            case R.id.SubMnuOpc1:
+                Toast.makeText(this, "Submenu: Opción 1", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.SubMnuOpc2:
+                Toast.makeText(this, "Submenu: Opción 2", Toast.LENGTH_SHORT).show();
+                return true;
             case R.id.MnuOpc3:
                 Intent intent = new Intent(this, AcercaDeActivity.class);
                 startActivity(intent);
@@ -80,6 +94,26 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }}
+
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo)
+    {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_ctx_etiqueta, menu);
+    }
+
+    public boolean onContextItemSelected(MenuItem itemMnuContex) {
+        switch (itemMnuContex.getItemId()) {
+            case R.id.CtxLblOpc1:
+                Toast.makeText(this, "Opcion 1 pulsada!", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.CtxLblOpc2:
+                Toast.makeText(this, "Opcion 2 pulsada!", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onContextItemSelected(itemMnuContex);
+        }
+    }
 
     private void sendInfoToActivity(Persona persona) {
         Intent intent = new Intent(this, SaludoActivity.class);

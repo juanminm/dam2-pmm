@@ -2,6 +2,13 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/MnuOpc1" android:title="Opcion1"></item>
-    <item android:id="@+id/MnuOpc2" android:title="Opcion2"></item>
+    <item android:id="@+id/MnuOpc2" android:title="Opcion2">
+        <menu>
+            <item android:id="@+id/SubMnuOpc1"
+                android:title="Opcion 2.1" />
+            <item android:id="@+id/SubMnuOpc2"
+                android:title="Opcion 2.2" />
+        </menu>
+    </item>
     <item android:id="@+id/MnuOpc3" android:title="Acerca de..."></item>
 </menu>

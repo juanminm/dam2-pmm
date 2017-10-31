@@ -4,8 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="org.institutoserpis.juanminm.proyectopersona.MainActivity">
-
+    <Button
+        android:id="@+id/boton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menu" />
     <ListView
         android:id="@+id/LstOpciones"
         android:layout_height="wrap_content"
