@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FigurasAleatorias</string>
+    <string name="random_shape_button_label">Ir a Random Shape</string>
+    <string name="shape_drawable_button_label">Ir a Shape Drawable</string>
+    <string name="redraw_button_label">Redibujar</string>
+    <string name="heading_activity_draw_shapes2">Formas dibujadas</string>
+</resources>
