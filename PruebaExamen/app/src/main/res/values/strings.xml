@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">PruebaExamen</string>
+    <string name="activity_main_logo">Logo</string>
     <string name="activity_main_transportes_android">TRANSPORTES ANDROID</string>
     <string name="activity_main_zona_a">Zona A</string>
     <string name="activity_main_zona_b">Zona B</string>
@@ -8,16 +9,16 @@
     <string name="activity_main_tarifa_urgente">TARIFA URGENTE</string>
     <string name="activity_main_caja_regalo">Caja regalo</string>
     <string name="activity_main_con_tarjeta">Con tarjeta dedicada</string>
-    <string name="activity_main_introducir_peso">Introduce el peso del paquete</string>
+    <string name="activity_main_introducir_peso">Introduce el peso del paquete:</string>
     <string name="activity_main_hacer_calculos">HACER CALCULOS</string>
-    <string name="activity_resultado_peso">Peso: %sKg</string>
-    <string name="activity_resultado_zona">Zona: %s</string>
+    <string name="activity_resultado_peso">Peso: %fKg.</string>
+    <string name="activity_resultado_zona">Zona: %s.</string>
     <string name="activity_resultado_zona_a">A (Asia/Oceanía)</string>
     <string name="activity_resultado_zona_b">B (América/África)</string>
     <string name="activity_resultado_zona_c">C (Europa)</string>
-    <string name="activity_resultado_tarifa">Tarifa: %s</string>
     <string name="activity_resultado_decoracion">Decoración: Con %s</string>
+    <string name="activity_resultado_tarifa">Tarifa: %s.</string>
     <string name="activity_resultado_decoracion_regalo">caja regalo</string>
     <string name="activity_resultado_decoracion_dedicatoria">dedicatoria</string>
-    <string name="activity_resultado_coste">COSTE FINAL: %s</string>
+    <string name="activity_resultado_coste">COSTE FINAL: %s.</string>
 </resources>

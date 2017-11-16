@@ -84,13 +84,13 @@ public class MainActivity extends AppCompatActivity {
         // Obtener la tarifa
         switch(tarifaRGroup.getCheckedRadioButtonId()) {
             case R.id.activity_main_rb_tarifa_normal:
-                tarifa = 1;
+                tarifa = 0;
                 break;
             case R.id.activity_main_rb_tarifa_urgente:
-                tarifa = 2;
+                tarifa = 1;
                 break;
             default:
-                tarifa = 1;
+                tarifa = 0;
         }
 
         // Obtener si tendra caja, targeta o ambas
