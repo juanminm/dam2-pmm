@@ -22,28 +22,28 @@ public class DestinoAdapter extends ArrayAdapter<Destino> {
     }
 
     public View getView(int i, View convertView, ViewGroup parent) {
-        View item = convertView;
+        View view = convertView;
         ViewHolder holder;
 
-        if (item == null) {
+        if (view == null) {
             LayoutInflater inflater = context.getLayoutInflater();
             //item = inflater.inflate(R.layout.listitem_destino, null);
-            item = inflater.inflate(R.layout.listitem_destino, null);
+            view = inflater.inflate(R.layout.listitem_destino, null);
 
             holder = new ViewHolder();
-            holder.zona = item.findViewById(R.id.listitem_destino_tv_zona);
-            holder.continentes = item.findViewById(R.id.listitem_destino_tv_continentes);
-            holder.precio = item.findViewById(R.id.listitem_destino_tv_precio);
-            item.setTag(holder);
+            holder.zona = view.findViewById(R.id.listitem_destino_tv_zona);
+            holder.continentes = view.findViewById(R.id.listitem_destino_tv_continentes);
+            holder.precio = view.findViewById(R.id.listitem_destino_tv_precio);
+            view.setTag(holder);
         } else {
-            holder = (ViewHolder)item.getTag();
+            holder = (ViewHolder)view.getTag();
         }
 
         holder.zona.setText(destinos[i].getZona());
         holder.continentes.setText(destinos[i].getContientes());
         holder.precio.setText(Double.toString(destinos[i].getPrecio()));
 
-        return item;
+        return view;
     }
 
     @Override
