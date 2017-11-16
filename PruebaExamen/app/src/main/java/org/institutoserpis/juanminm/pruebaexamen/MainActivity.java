@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
         //Intent intent = new Intent(this, Resultado.class);
         //Bundle bundle = new Bundle();
         Pedido pedido;
-        String tarifa;
-        String zona;
+        int tarifa;
+        int zona;
         double peso;
         boolean conCaja;
         boolean conTarjeta;
@@ -68,29 +68,29 @@ public class MainActivity extends AppCompatActivity {
         // Obtener la zona
         switch(zonaSpinner.getSelectedItemPosition()) {
             case 0:
-                zona = "A";
+                zona = 0;
                 break;
             case 1:
-                zona = "B";
+                zona = 1;
                 break;
             case 2:
-                zona = "C";
+                zona = 2;
                 break;
             default:
-                zona = "A";
+                zona = 0;
                 break;
         }
 
         // Obtener la tarifa
         switch(tarifaRGroup.getCheckedRadioButtonId()) {
             case R.id.activity_main_rb_tarifa_normal:
-                tarifa = "normal";
+                tarifa = 1;
                 break;
             case R.id.activity_main_rb_tarifa_urgente:
-                tarifa = "urgente";
+                tarifa = 2;
                 break;
             default:
-                tarifa = "normal";
+                tarifa = 1;
         }
 
         // Obtener si tendra caja, targeta o ambas

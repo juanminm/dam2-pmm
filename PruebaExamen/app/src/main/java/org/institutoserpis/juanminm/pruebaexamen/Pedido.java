@@ -7,13 +7,13 @@ import java.io.Serializable;
  */
 
 public class Pedido implements Serializable {
-    private String zona;
-    private String tarifa;
+    private int zona;
+    private int tarifa;
     private double peso;
     private boolean conTarjeta;
     private boolean conCaja;
 
-    public Pedido (String zona, String tarifa, boolean conTarjeta, boolean conCaja, double peso) {
+    public Pedido (int zona, int tarifa, boolean conTarjeta, boolean conCaja, double peso) {
         this.zona = zona;
         this.tarifa = tarifa;
         this.conTarjeta = conTarjeta;
@@ -21,11 +21,11 @@ public class Pedido implements Serializable {
         this.peso = peso;
     }
 
-    public String getZona() {
+    public int getZona() {
         return zona;
     }
 
-    public String getTarifa() {
+    public int getTarifa() {
         return tarifa;
     }
 
