@@ -7,22 +7,22 @@ import java.io.Serializable;
  */
 
 public class Pedido implements Serializable {
-    private int zona;
+    private Destino destino;
     private int tarifa;
     private double peso;
     private boolean conTarjeta;
     private boolean conCaja;
 
-    public Pedido (int zona, int tarifa, boolean conTarjeta, boolean conCaja, double peso) {
-        this.zona = zona;
+    public Pedido (Destino destino, int tarifa, boolean conTarjeta, boolean conCaja, double peso) {
+        this.destino = destino;
         this.tarifa = tarifa;
         this.conTarjeta = conTarjeta;
         this.conCaja = conCaja;
         this.peso = peso;
     }
 
-    public int getZona() {
-        return zona;
+    public Destino getDestino() {
+        return destino;
     }
 
     public int getTarifa() {
@@ -43,6 +43,6 @@ public class Pedido implements Serializable {
 
     @Override
     public String toString() {
-        return zona + "," + tarifa + "," + conCaja + "," + conTarjeta + "," + peso;
+        return destino + "," + tarifa + "," + conCaja + "," + conTarjeta + "," + peso;
     }
 }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rowCount="1"
+    android:columnCount="3"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/listitem_destino_tv_zona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="D"
+        android:layout_column="0"
+        android:layout_margin="8dp"/>
+    <TextView
+        android:id="@+id/listitem_destino_tv_continentes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_column="1"
+        tools:text="Antartica"/>
+    <TextView
+        android:id="@+id/listitem_destino_tv_precio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_column="2"
+        tools:text="40"/>
+</GridLayout>

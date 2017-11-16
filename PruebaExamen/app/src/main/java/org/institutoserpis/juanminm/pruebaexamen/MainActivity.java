@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String PEDIDO = "org.institutoserpis.juanminm.pruebaexamen.PEDIDO";
 
+    private Destino[] destinos;
+
     Button calcularButton;
     CheckBox conTarjetaCBox;
     CheckBox cajaRegaloCBox;
@@ -34,17 +36,23 @@ public class MainActivity extends AppCompatActivity {
         zonaSpinner = findViewById(R.id.activity_main_sp_zona);
         calcularButton = findViewById(R.id.activity_main_btn_calcular);
 
-        final String[] paises = new String[]{
-                getResources().getString(R.string.activity_main_zona_a),
-                getResources().getString(R.string.activity_main_zona_b),
-                getResources().getString(R.string.activity_main_zona_c)
+        destinos = new Destino[]{
+                new Destino(
+                        getResources().getString(R.string.global_zona_a),
+                        getResources().getString(R.string.global_zona_a_continentes),
+                        30),
+                new Destino(
+                        getResources().getString(R.string.global_zona_b),
+                        getResources().getString(R.string.global_zona_b_continentes),
+                        20),
+                new Destino(
+                        getResources().getString(R.string.global_zona_c),
+                        getResources().getString(R.string.global_zona_c_continentes),
+                        10)
         };
 
-        ArrayAdapter<String> adaptadorZonas = new ArrayAdapter<>(this,
-                android.R.layout.simple_spinner_item, paises);
-
-        adaptadorZonas.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        zonaSpinner.setAdapter(adaptadorZonas);
+        DestinoAdapter adaptadorDestinos = new DestinoAdapter(this, destinos);
+        zonaSpinner.setAdapter(adaptadorDestinos);
 
         calcularButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ResultadoActivity.class);
         Bundle bundle = new Bundle();
         Pedido pedido;
+        int posicion;
         int tarifa;
         int zona;
         double peso;
@@ -65,20 +74,7 @@ public class MainActivity extends AppCompatActivity {
         boolean conTarjeta;
 
         // Obtener la zona
-        switch(zonaSpinner.getSelectedItemPosition()) {
-            case 0:
-                zona = 0;
-                break;
-            case 1:
-                zona = 1;
-                break;
-            case 2:
-                zona = 2;
-                break;
-            default:
-                zona = 0;
-                break;
-        }
+        posicion = zonaSpinner.getSelectedItemPosition();
 
         // Obtener la tarifa
         switch(tarifaRGroup.getCheckedRadioButtonId()) {
@@ -99,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         //Obtener peso
         peso = Double.valueOf(pesoEText.getText().toString());
 
-        pedido = new Pedido(zona, tarifa, conTarjeta, conCaja, peso);
+        pedido = new Pedido(destinos[posicion], tarifa, conTarjeta, conCaja, peso);
 
         bundle.putSerializable(PEDIDO, pedido);
         intent.putExtras(bundle);

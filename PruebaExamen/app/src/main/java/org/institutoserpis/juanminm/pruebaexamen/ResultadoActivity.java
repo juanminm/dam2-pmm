@@ -55,22 +55,10 @@ public class ResultadoActivity extends AppCompatActivity {
     }
 
     private String obtenerZona(Pedido pedido) {
-        switch (pedido.getZona()) {
-            case 0:
-                zona = R.string.activity_resultado_zona_a;
-                break;
-            case 1:
-                zona = R.string.activity_resultado_zona_b;
-                break;
-            case 2:
-                zona = R.string.activity_resultado_zona_c;
-                break;
-            default:
-                zona = R.string.activity_resultado_zona_a;
-        }
+        Destino destino = pedido.getDestino();
 
         return String.format(getResources().getString(R.string.activity_resultado_zona),
-                getResources().getString(zona));
+                destino.getZona(), destino.getContientes());
     }
 
     private String obtenerDecoracion(Pedido pedido) {

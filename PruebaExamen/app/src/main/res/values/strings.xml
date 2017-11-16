@@ -2,9 +2,12 @@
     <string name="app_name">PruebaExamen</string>
     <string name="activity_main_logo">Logo</string>
     <string name="activity_main_transportes_android">TRANSPORTES ANDROID</string>
-    <string name="activity_main_zona_a">Zona A</string>
-    <string name="activity_main_zona_b">Zona B</string>
-    <string name="activity_main_zona_c">Zona C</string>
+    <string name="global_zona_a">A</string>
+    <string name="global_zona_a_continentes">Asia/Oceanía</string>
+    <string name="global_zona_b">B</string>
+    <string name="global_zona_b_continentes">América/África</string>
+    <string name="global_zona_c">C</string>
+    <string name="global_zona_c_continentes">Europa</string>
     <string name="activity_main_tarifa_normal">TARIFA NORMAL</string>
     <string name="activity_main_tarifa_urgente">TARIFA URGENTE</string>
     <string name="activity_main_caja_regalo">Caja regalo</string>
@@ -12,10 +15,7 @@
     <string name="activity_main_introducir_peso">Introduce el peso del paquete:</string>
     <string name="activity_main_hacer_calculos">HACER CALCULOS</string>
     <string name="activity_resultado_peso">Peso: %fKg.</string>
-    <string name="activity_resultado_zona">Zona: %s.</string>
-    <string name="activity_resultado_zona_a">A (Asia/Oceanía)</string>
-    <string name="activity_resultado_zona_b">B (América/África)</string>
-    <string name="activity_resultado_zona_c">C (Europa)</string>
+    <string name="activity_resultado_zona">Zona: %s (%s).</string>
     <string name="activity_resultado_tarifa">Tarifa: %s.</string>
     <string name="activity_resultado_tarifa_normal">normal</string>
     <string name="activity_resultado_tarifa_urgente">urgente</string>
