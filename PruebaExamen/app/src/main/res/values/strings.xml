@@ -16,9 +16,14 @@
     <string name="activity_resultado_zona_a">A (Asia/Oceanía)</string>
     <string name="activity_resultado_zona_b">B (América/África)</string>
     <string name="activity_resultado_zona_c">C (Europa)</string>
-    <string name="activity_resultado_decoracion">Decoración: Con %s</string>
     <string name="activity_resultado_tarifa">Tarifa: %s.</string>
+    <string name="activity_resultado_tarifa_normal">normal</string>
+    <string name="activity_resultado_tarifa_urgente">urgente</string>
+    <string name="activity_resultado_decoracion">Decoración: %s.</string>
+    <string name="activity_resultado_decoracion_ninguna">Sin decoración.</string>
+    <string name="activity_resultado_decoracion_alguna">Con %s</string>
     <string name="activity_resultado_decoracion_regalo">caja regalo</string>
-    <string name="activity_resultado_decoracion_dedicatoria">dedicatoria</string>
-    <string name="activity_resultado_coste">COSTE FINAL: %s.</string>
+    <string name="activity_resultado_decoracion_ambas">y</string>
+    <string name="activity_resultado_decoracion_dedicatoria">tarjeta dedicatoria</string>
+    <string name="activity_resultado_coste">COSTE FINAL: %.2f€ (%.2f + (%.2f*%.4f) + (%.2f*%.2f)).</string>
 </resources>

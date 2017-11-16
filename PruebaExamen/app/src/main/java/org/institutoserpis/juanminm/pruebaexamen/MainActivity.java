@@ -10,7 +10,6 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void calcular() {
-        //Intent intent = new Intent(this, Resultado.class);
-        //Bundle bundle = new Bundle();
+        Intent intent = new Intent(this, ResultadoActivity.class);
+        Bundle bundle = new Bundle();
         Pedido pedido;
         int tarifa;
         int zona;
@@ -102,10 +101,8 @@ public class MainActivity extends AppCompatActivity {
 
         pedido = new Pedido(zona, tarifa, conTarjeta, conCaja, peso);
 
-        //bundle.putSerializable(PEDIDO, pedido);
-        //intent.putExtras(bundle);
-        //startActivity(intent);
-
-        Toast.makeText(this, pedido.toString(), Toast.LENGTH_SHORT).show();
+        bundle.putSerializable(PEDIDO, pedido);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 }
