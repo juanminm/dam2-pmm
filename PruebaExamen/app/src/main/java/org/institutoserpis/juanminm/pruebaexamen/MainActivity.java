@@ -3,8 +3,10 @@ package org.institutoserpis.juanminm.pruebaexamen;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -60,6 +62,31 @@ public class MainActivity extends AppCompatActivity {
                 calcular();
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_principal, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent;
+
+        switch(item.getItemId()) {
+            case R.id.menu_opt_mostrar_logo:
+                //TODO Pasar a LogoActivity
+                return true;
+            case R.id.menu_opt_acerca_de:
+                intent = new Intent(this, AcercaDeActivity.class);
+                startActivity(intent);
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     protected void calcular() {

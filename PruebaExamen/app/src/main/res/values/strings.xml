@@ -26,4 +26,9 @@
     <string name="activity_resultado_decoracion_ambas">y</string>
     <string name="activity_resultado_decoracion_dedicatoria">tarjeta dedicatoria</string>
     <string name="activity_resultado_coste">COSTE FINAL: %.2f€ (%.2f + (%.2f*%.4f) + (%.2f*%.2f)).</string>
+    <string name="activity_acerca_de_version">Versión: %s</string>
+    <string name="activity_acerca_de_version_numero">0.1</string>
+    <string name="activity_acerca_de_autores">Autores: %s</string>
+    <string name="activity_acerca_de_autores_nombres">Juan Miguel Navarro Martínez</string>
+    <string name="actitivy_acerca_de_copyright">Copyright 2017-%d Juan Miguel Navarro Martínez</string>
 </resources>

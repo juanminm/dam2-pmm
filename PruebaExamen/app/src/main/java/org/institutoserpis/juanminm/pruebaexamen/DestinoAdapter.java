@@ -50,7 +50,7 @@ public class DestinoAdapter extends ArrayAdapter<Destino> {
     public View getDropDownView(final int position, View convertView, final ViewGroup parent) {
         final View view = getView(position, convertView, parent);
 
-        return  view;
+        return view;
     }
 
     static class ViewHolder {
