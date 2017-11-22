@@ -1,10 +1,12 @@
 package org.institutoserpis.juanminm.pruebaexamen;
 
+import java.io.Serializable;
+
 /**
  * Created by Juanmi on 2017-11-16.
  */
 
-public class Destino {
+public class Destino implements Serializable {
 
     private String zona;
     private String contientes;
