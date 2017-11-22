@@ -80,7 +80,8 @@ public class MainActivity extends AppCompatActivity {
 
         switch(item.getItemId()) {
             case R.id.menu_opt_mostrar_logo:
-                //TODO Pasar a LogoActivity
+                intent = new Intent(this, LogoActivity.class);
+                startActivity(intent);
                 return true;
             case R.id.menu_opt_acerca_de:
                 intent = new Intent(this, AcercaDeActivity.class);
