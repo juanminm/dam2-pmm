@@ -8,8 +8,8 @@ import java.io.Serializable;
 
 public class Destino implements Serializable {
 
-    private String zona;
-    private String contientes;
+    private int zona;
+    private int contientes;
     private double precio;
     private int imagen;
 
@@ -20,7 +20,7 @@ public class Destino implements Serializable {
         this.imagen = imagen;
     }
 
-    public String getZona() {
+    public int getZona() {
         return zona;
     }
 
@@ -28,7 +28,7 @@ public class Destino implements Serializable {
         return precio;
     }
 
-    public String getContientes() {
+    public int getContientes() {
         return contientes;
     }
 

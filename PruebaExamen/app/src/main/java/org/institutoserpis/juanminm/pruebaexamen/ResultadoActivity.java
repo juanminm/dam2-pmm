@@ -62,7 +62,8 @@ public class ResultadoActivity extends AppCompatActivity {
         Destino destino = pedido.getDestino();
 
         return String.format(getResources().getString(R.string.activity_resultado_zona),
-                destino.getZona(), destino.getContientes());
+                getResources().getString(destino.getZona()),
+                getResources().getString(destino.getContientes()));
     }
 
     private String obtenerDecoracion(Pedido pedido) {

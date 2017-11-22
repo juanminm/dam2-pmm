@@ -39,8 +39,8 @@ public class DestinoAdapter extends ArrayAdapter<Destino> {
             holder = (ViewHolder)view.getTag();
         }
 
-        holder.zona.setText(destinos[i].getZona());
-        holder.continentes.setText(destinos[i].getContientes());
+        holder.zona.setText(context.getResources().getString(destinos[i].getZona()));
+        holder.continentes.setText(context.getResources().getString(destinos[i].getContientes()));
         holder.precio.setText(Double.toString(destinos[i].getPrecio()));
 
         return view;
