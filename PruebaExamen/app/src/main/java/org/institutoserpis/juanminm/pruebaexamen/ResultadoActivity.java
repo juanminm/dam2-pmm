@@ -8,7 +8,6 @@ import android.widget.TextView;
 public class ResultadoActivity extends AppCompatActivity {
 
     private double peso;
-    private int zona;
 
     ImageView imageView;
     TextView zonaTView;
@@ -143,26 +142,12 @@ public class ResultadoActivity extends AppCompatActivity {
     }
 
     private String obtenerCoste(Pedido pedido) {
-        double costeZona;
+        double costeZona = pedido.getDestino().getPrecio();
         double costeVariablePeso;
         double costeFijoPeso;
         double precioFinal;
         double incrementoTarifa;
         String coste;
-
-        switch (zona) {
-            case 0:
-                costeZona = 30;
-                break;
-            case 1:
-                costeZona = 20;
-                break;
-            case 2:
-                costeZona = 10;
-                break;
-            default:
-                costeZona = 30;
-        }
 
         if (peso < 6) {
             costeVariablePeso = 1;

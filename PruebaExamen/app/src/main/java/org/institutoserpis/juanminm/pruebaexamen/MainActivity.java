@@ -98,7 +98,6 @@ public class MainActivity extends AppCompatActivity {
         Pedido pedido;
         int posicion;
         int tarifa;
-        int zona;
         double peso;
         boolean conCaja;
         boolean conTarjeta;
