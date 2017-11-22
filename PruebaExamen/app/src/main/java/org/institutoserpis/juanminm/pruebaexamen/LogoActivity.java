@@ -11,10 +11,24 @@ import android.view.View;
 
 public class LogoActivity extends AppCompatActivity {
 
+    Paint azulClaroPincel;
+    Paint azulOscuroPincel;
+    Paint contornoPincel;
+    Paint textoPincel;
+    Path gorroPath;
+    Path cuerpoPath;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(new LogoView(this));
+
+        azulClaroPincel = new Paint();
+        azulOscuroPincel = new Paint();
+        contornoPincel = new Paint();
+        textoPincel = new Paint();
+        gorroPath = new Path();
+        cuerpoPath = new Path();
     }
 
     public class LogoView extends View {
@@ -24,12 +38,6 @@ public class LogoActivity extends AppCompatActivity {
 
         @Override
         protected void onDraw(Canvas canvas) {
-            Paint azulClaroPincel = new Paint();
-            Paint azulOscuroPincel = new Paint();
-            Paint contornoPincel = new Paint();
-            Paint textoPincel = new Paint();
-            Path gorroPath = new Path();
-            Path cuerpoPath = new Path();
             int cx = getWidth() / 2;
 
             azulClaroPincel.setARGB(255, 150, 200, 240);
