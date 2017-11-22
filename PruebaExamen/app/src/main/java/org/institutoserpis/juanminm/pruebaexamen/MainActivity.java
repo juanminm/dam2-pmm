@@ -42,15 +42,18 @@ public class MainActivity extends AppCompatActivity {
                 new Destino(
                         getResources().getString(R.string.global_zona_a),
                         getResources().getString(R.string.global_zona_a_continentes),
-                        30),
+                        30,
+                        R.drawable.asia_oceania),
                 new Destino(
                         getResources().getString(R.string.global_zona_b),
                         getResources().getString(R.string.global_zona_b_continentes),
-                        20),
+                        20,
+                        R.drawable.america_africa),
                 new Destino(
                         getResources().getString(R.string.global_zona_c),
                         getResources().getString(R.string.global_zona_c_continentes),
-                        10)
+                        10,
+                        R.drawable.europa)
         };
 
         DestinoAdapter adaptadorDestinos = new DestinoAdapter(this, destinos);

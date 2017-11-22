@@ -2,6 +2,7 @@ package org.institutoserpis.juanminm.pruebaexamen;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ResultadoActivity extends AppCompatActivity {
@@ -9,6 +10,7 @@ public class ResultadoActivity extends AppCompatActivity {
     private double peso;
     private int zona;
 
+    ImageView imageView;
     TextView zonaTView;
     TextView tarifaTView;
     TextView pesoTView;
@@ -23,12 +25,14 @@ public class ResultadoActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         Pedido pedido = (Pedido)bundle.getSerializable(MainActivity.PEDIDO);
 
+        imageView = findViewById(R.id.imageView);
         zonaTView = findViewById(R.id.activity_resultado_tv_zona);
         tarifaTView = findViewById(R.id.activity_resultado_tv_tarifa);
         pesoTView = findViewById(R.id.activity_resultado_tv_peso);
         decoracionTView = findViewById(R.id.activity_resultado_tv_decoracion);
         costeFinalTView = findViewById(R.id.activity_resultado_tv_coste_final);
 
+        imageView.setImageResource(pedido.getDestino().getImagen());
         zonaTView.setText(obtenerZona(pedido));
         tarifaTView.setText(obtenerTarifa(pedido));
         decoracionTView.setText(obtenerDecoracion(pedido));

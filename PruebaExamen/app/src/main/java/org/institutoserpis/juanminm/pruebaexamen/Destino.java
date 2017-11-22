@@ -11,11 +11,13 @@ public class Destino implements Serializable {
     private String zona;
     private String contientes;
     private double precio;
+    private int imagen;
 
-    public Destino(String zona, String contientes, double precio) {
+    public Destino(int zona, int contientes, double precio, int imagen) {
         this.zona = zona;
         this.contientes = contientes;
         this.precio = precio;
+        this.imagen = imagen;
     }
 
     public String getZona() {
@@ -28,5 +30,9 @@ public class Destino implements Serializable {
 
     public String getContientes() {
         return contientes;
+    }
+
+    public int getImagen() {
+        return imagen;
     }
 }
