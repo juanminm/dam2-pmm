@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Solobici</string>
+    <string name="activity_solobici_jugar">Jugar</string>
+    <string name="activity_solobici_configurar">Preferencias</string>
+    <string name="activity_solobici_acerca_de">Acerda de...</string>
+    <string name="activity_solobici_salir">Salir</string>
+</resources>
