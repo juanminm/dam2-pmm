@@ -34,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
         goToFactConHilosButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO
+                Intent intent = new Intent(MainActivity.this, FactorialConHilosActivity.class);
+
+                goToActivity(intent);
             }
         });
 
