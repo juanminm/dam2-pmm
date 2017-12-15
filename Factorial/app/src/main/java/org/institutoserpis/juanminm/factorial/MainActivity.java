@@ -43,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
         goToFactConAsynctaskButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO
+                Intent intent = new Intent(MainActivity.this, FactorialConAsynctaskActivity.class);
+
+                goToActivity(intent);
             }
         });
     }
