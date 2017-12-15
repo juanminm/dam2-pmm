@@ -27,6 +27,31 @@ public class VistaJuego extends View {
     private static int PERIODO_PROCESO = 50;
     private long ultimoProceso = 0;
 
+    public VistaJuego(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+        Drawable graficoBici;
+        Drawable graficoCoche;
+        Drawable graficoRueda;
+
+        graficoCoche = context.getResources().getDrawable(R.drawable.coche);
+
+        Coches = new Vector<>();
+
+        for (int i = 0; i < numCoches; i++) {
+            Grafico coche = new Grafico(this, graficoCoche);
+            coche.setIncX(Math.random() * 4 - 2);
+            coche.setIncY(Math.random() * 4 - 2);
+            coche.setAngulo((int) (Math.random() * 360));
+            coche.setRotacion((int) (Math.random() * 8 - 4));
+            Coches.add(coche);
+        }
+
+        graficoBici = context.getResources().getDrawable(R.drawable.bici);
+        bici = new Grafico(this, graficoBici);
+        hiloJuego = new HiloJuego();
+        hiloJuego.start();
+    }
+
     protected synchronized void actualizaMovimiento() {
         long ahora = System.currentTimeMillis();
         // No hacemos nada si el período de proceso no se ha cumplido.
@@ -61,31 +86,6 @@ public class VistaJuego extends View {
                 actualizaMovimiento();
             }
         }
-    }
-
-    public VistaJuego(Context context, AttributeSet attributeSet) {
-        super(context, attributeSet);
-        Drawable graficoBici;
-        Drawable graficoCoche;
-        Drawable graficoRueda;
-
-        graficoCoche = context.getResources().getDrawable(R.drawable.coche);
-
-        Coches = new Vector<>();
-
-        for (int i = 0; i < numCoches; i++) {
-            Grafico coche = new Grafico(this, graficoCoche);
-            coche.setIncX(Math.random() * 4 - 2);
-            coche.setIncY(Math.random() * 4 - 2);
-            coche.setAngulo((int) (Math.random() * 360));
-            coche.setRotacion((int) (Math.random() * 8 - 4));
-            Coches.add(coche);
-        }
-
-        graficoBici = context.getResources().getDrawable(R.drawable.bici);
-        bici = new Grafico(this, graficoBici);
-        hiloJuego = new HiloJuego();
-        hiloJuego.start();
     }
 
     @Override
