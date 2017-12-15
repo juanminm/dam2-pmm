@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CargarPreferencias</string>
+    <string name="title_activity_pantalla_opciones">PantallaOpcionesActivity</string>
+    <string name="activity_ejemplo_preferencias_preferencias">Preferencias</string>
+    <string name="activity_ejemplo_preferencias_obtener_preferencias">Obtener preferencias</string>
+</resources>
