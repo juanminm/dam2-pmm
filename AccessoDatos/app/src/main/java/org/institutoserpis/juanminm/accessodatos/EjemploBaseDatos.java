@@ -1,9 +1,15 @@
 package org.institutoserpis.juanminm.accessodatos;
 
+import android.app.DialogFragment;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
@@ -14,6 +20,7 @@ import java.util.ArrayList;
 public class EjemploBaseDatos extends AppCompatActivity {
 
     Spinner clientesSpinner;
+    private int mStackPosition = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +32,14 @@ public class EjemploBaseDatos extends AppCompatActivity {
         SQLiteDatabase db = cliBDh.getWritableDatabase();
 
         if (db != null) {
-//            for (int cont = 1; cont <= 3; cont++) {
-//                int codigo = cont;
-//                String nombre = "Cliente" + cont;
-//                String telefono = cont + "XXXXXXX";
-//
-//                db.execSQL("INSERT INTO Clientes (codigo, nombre, telefono) "
-//                        + "VALUES ('" + codigo + "', '" + nombre + "', '" + telefono + "')");
-//            }
+            for (int cont = 1; cont <= 3; cont++) {
+                int codigo = cont;
+                String nombre = "Cliente" + cont;
+                String telefono = cont + "XXXXXXX";
+
+                db.execSQL("INSERT INTO Clientes (codigo, nombre, telefono) "
+                        + "VALUES ('" + codigo + "', '" + nombre + "', '" + telefono + "')");
+            }
 //
 //            //Insertar un registro
 //            db.execSQL("INSERT INTO Clientes (nombre, telefono) VALUES ('cli1','11111') ");
@@ -89,6 +96,8 @@ public class EjemploBaseDatos extends AppCompatActivity {
                 } while (c.moveToNext());
             }
 
+            c.close();
+
             clientesSpinner = findViewById(R.id.activity_ejemplo_base_datos_sp_clientes);
             ClienteAdapter adapter = new ClienteAdapter(this, clientes.toArray(new Cliente[clientes.size()]));
             clientesSpinner.setAdapter(adapter);
@@ -106,6 +115,38 @@ public class EjemploBaseDatos extends AppCompatActivity {
             //Cerramos la base de datos
             db.close();
         } //del if
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_principal, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_opt_insertar_registro:
+
+        }
+    }
+
+    void addFragment() {
+        mStackPosition++;
+        // Instanciamos nuevo Fragment
+        Fragment newFragment = SimpleFragment.newInstance(mStackPosition);
+        // Se aÃ±ade el Fragment a la actividad
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.fragmentShow, newFragment);
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+        ft.addToBackStack(null);// poneos la transacion a la pila
+        ft.commit();
+    }
+
+    public showDialogFragment(InsertarRegistroFragment dialogFragment) {
+        dialogFragment = InsertarRegistroFragment.newInstance();
+        dialogFragment.show(getFragmentManager(), "dialog");
     }
 
 }
