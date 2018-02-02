@@ -13,7 +13,7 @@ final class Globals {
     static final String TABLE_PLAYER_NAME = "player";
     static final String TABLE_PLAYER_FIELD_ID = "id";
     static final String TABLE_PLAYER_FIELD_NAME = "name";
-    static final String TABLE_PLAYER_FIELD_PASSWORD = "name";
+    static final String TABLE_PLAYER_FIELD_PASSWORD = "password";
     static final String TABLE_PLAYER_FIELD_MONEY = "money";
 
     // Table Items
