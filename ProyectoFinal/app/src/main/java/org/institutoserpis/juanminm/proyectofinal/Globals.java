@@ -42,8 +42,7 @@ final class Globals {
                     "%s INTEGER PRIMARY KEY, " +
                     "%s TEXT NOT NULL, " +
                     "%s TEXT NOT NULL, " +
-                    "%s INTEGER NOT NULL, " +
-                    "%s INTEGER NOT NULL)",
+                    "%s DOUBLE NOT NULL)",
             TABLE_PLAYER_NAME,
             TABLE_PLAYER_FIELD_ID,
             TABLE_PLAYER_FIELD_NAME,
