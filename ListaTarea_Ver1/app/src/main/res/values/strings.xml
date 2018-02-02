@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ListaTarea_Ver1</string>
+    <string name="save">Guardar</string>
+    <string name="newItem">Nuevo objeto</string>
+    <string name="editItem">Editar objeto</string>
+    <string name="deleteItem">Eliminar objeto</string>
+    <string name="dataError">Error al obtener los datos</string>
+    <string name="name">Nombre</string>
+    <string name="gender">Genero</string>
+    <string name="birth_date">Fecha de nacimiento</string>
+    <string name="nationality">Nacionalidad</string>
+    <string name="city">Ciudad</string>
+    <string name="pending">Pendiente</string>
+    <string name="lstNoElements">No hay elementos en la lista</string>
+</resources>
