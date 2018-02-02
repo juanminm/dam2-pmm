@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">LeerJSON2</string>
+    <string name="latitud">Latitud</string>
+    <string name="longitud">Longitud</string>
+    <string name="obtener_lugar">Obtener lugar</string>
+</resources>
