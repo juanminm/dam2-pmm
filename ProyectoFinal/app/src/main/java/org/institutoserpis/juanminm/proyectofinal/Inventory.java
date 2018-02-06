@@ -5,18 +5,24 @@ package org.institutoserpis.juanminm.proyectofinal;
  */
 
 public class Inventory {
+    private long id;
     private long playerId;
     private long itemId;
     private int quantity;
 
-    public Inventory(long playerId, long itemId) {
-        this(playerId, itemId, 1);
+    public Inventory(long id, long playerId, long itemId) {
+        this(id, playerId, itemId, 1);
     }
 
-    public Inventory(long playerId, long itemId, int quantity) {
+    public Inventory(long id, long playerId, long itemId, int quantity) {
+        this.id = id;
         this.playerId = playerId;
         this.itemId = itemId;
         this.quantity= quantity;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public long getPlayerId() {
