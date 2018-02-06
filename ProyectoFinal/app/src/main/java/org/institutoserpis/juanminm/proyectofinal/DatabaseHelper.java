@@ -12,8 +12,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper {
     private Context mCtx = null;
-    private DataBaseHelperInternal mDbHelper = null;
-    private SQLiteDatabase mDb = null;
+    private static DataBaseHelperInternal mDbHelper = null;
+    private static SQLiteDatabase mDb = null;
 
     public DatabaseHelper(Context ctx) {
         this.mCtx = ctx;
@@ -64,11 +64,11 @@ public class DatabaseHelper {
         return this;
     }
 
-    public void close() {
+    public static void close() {
         mDbHelper.close();
     }
 
-    public Cursor getItems(String table, String[] columns, String selection, String[] selArgs, String orderBy) {
+    public static Cursor getItems(String table, String[] columns, String selection, String[] selArgs, String orderBy) {
         return mDb.query(
                 table,
                 columns,
@@ -79,7 +79,7 @@ public class DatabaseHelper {
                 orderBy);
     }
 
-    public long insertItem(String table, String[][] data) {
+    public static long insertItem(String table, String[][] data) {
         ContentValues initialValues = new ContentValues();
 
         for (String[] field : data)
@@ -88,7 +88,7 @@ public class DatabaseHelper {
         return mDb.insert(table, null, initialValues);
     }
 
-    public int updateItem(String table, String where, String[] whereArgs, String[][] data) {
+    public static int updateItem(String table, String where, String[] whereArgs, String[][] data) {
         ContentValues contentValues = new ContentValues();
 
         for (String[] field : data)
@@ -97,7 +97,7 @@ public class DatabaseHelper {
         return mDb.update(table, contentValues, where, whereArgs);
     }
 
-    public int delete(String table, String where, String[] whereArgs) {
+    public static int delete(String table, String where, String[] whereArgs) {
         return mDb.delete(table, where, whereArgs);
     }
 
