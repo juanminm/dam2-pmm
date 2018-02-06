@@ -13,7 +13,7 @@ public class Player {
        this("", 0);
     }
 
-    Player(String name, double money) {
+    public Player(String name, double money) {
         this.name = name;
         this.money = money;
     }
