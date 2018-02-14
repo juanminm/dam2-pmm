@@ -51,10 +51,17 @@ public class DatabaseHelper {
 
         private void fillTables(SQLiteDatabase db) {
             //TODO
-//            db.execSQL(Globals.FILL_TABLE_PLAYER);
-//            db.execSQL(Globals.FILL_TABLE_ITEM);
-//            db.execSQL(Globals.FILL_TABLE_INVENTORY);
-//            db.execSQL(Globals.FILL_TABLE_MARKET);
+            db.beginTransaction();
+            try {
+//                db.execSQL(Globals.FILL_TABLE_PLAYER);
+//                db.execSQL(Globals.FILL_TABLE_ITEM);
+//                db.execSQL(Globals.FILL_TABLE_INVENTORY);
+                //db.execSQL(Globals.FILL_TABLE_MARKET);
+
+                db.setTransactionSuccessful();
+            } finally {
+                db.endTransaction();
+            }
         }
     }
 
