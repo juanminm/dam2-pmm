@@ -7,8 +7,8 @@ package org.institutoserpis.juanminm.proyectofinal;
 
 public final class Globals {
     // Database settings
-    public static final String DATABASE_NAME = "GameMarket";
-    public static final int DATABASE_VERSION = 2;
+    public static final String DATABASE_NAME = "GameMarket.db";
+    public static final int DATABASE_VERSION = 1;
 
     // Table Player
     public static final String TABLE_PLAYER_NAME = "player";
