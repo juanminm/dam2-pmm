@@ -38,8 +38,8 @@ public final class Globals {
 
     // CREATE Queries
     public static final String CREATE_TABLE_PLAYER = String.format(
-            "CREATE TABLE %s (" +
-                    "%s INTEGER PRIMARY KEY, " +
+            "CREATE TABLE IF NOT EXISTS %s (" +
+                    "%s INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "%s TEXT NOT NULL, " +
                     "%s TEXT NOT NULL, " +
                     "%s DOUBLE NOT NULL)",
@@ -51,8 +51,8 @@ public final class Globals {
     );
 
     public static final String CREATE_TABLE_ITEM = String.format(
-            "CREATE TABLE %s (" +
-                    "%s INTEGER PRIMARY KEY, " +
+            "CREATE TABLE IF NOT EXISTS %s (" +
+                    "%s INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "%s TEXT NOT NULL)",
             TABLE_ITEM_NAME,
             TABLE_ITEM_FIELD_ID,
@@ -60,7 +60,7 @@ public final class Globals {
     );
 
     public static final String CREATE_TABLE_INVENTORY = String.format(
-            "CREATE TABLE %s (" +
+            "CREATE TABLE IF NOT EXISTS %s (" +
                     "%s INTEGER NOT NULL REFERENCES %s (%s), " +
                     "%s INTEGER NOT NULL REFERENCES %s (%s), " +
                     "%s INTEGER NOT NULL)",
@@ -76,7 +76,7 @@ public final class Globals {
     );
 
     public static final String CREATE_TABLE_MARKET = String.format(
-            "CREATE TABLE %s (" +
+            "CREATE TABLE IF NOT EXISTS %s (" +
                     "%s INTEGER NOT NULL, " +
                     "%s INTEGER NOT NULL REFERENCES %s (%s), " +
                     "%s INTEGER NOT NULL REFERENCES %s (%s), " +
