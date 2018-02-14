@@ -1,10 +1,12 @@
 package org.institutoserpis.juanminm.proyectofinal;
 
+import java.io.Serializable;
+
 /**
  * Created by juamar on 2/02/18.
  */
 
-public class Player {
+public class Player implements Serializable {
     private long id;
     private String name;
     private double money;
