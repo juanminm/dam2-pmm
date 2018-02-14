@@ -12,7 +12,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper {
     private Context mCtx = null;
-    private DataBaseHelperInternal mDbHelper = null;
+    private static DataBaseHelperInternal mDbHelper = null;
     private SQLiteDatabase mDb = null;
 
     public DatabaseHelper(Context ctx) {
