@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Categoría 1">
+        <CheckBoxPreference
+            android:key="opcion1"
+            android:title="Habilitar borrar tareas"
+            android:summary="Si la opción está activada, podras borrar tareas a partir del menu
+            contextual de cada tarea." />
+        <EditTextPreference
+            android:key="opcion2"
+            android:title="Preferencia 2"
+            android:summary="Descripción preferencia2"
+            android:dialogTitle="Introduce valor" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Categoría 2">
+        <ListPreference
+            android:key="opcion3"
+            android:title="Tipo de tarea"
+            android:summary="Selecciona el tipo de tareas a mostrar."
+            android:dialogTitle="Indicar Pais"
+            android:entries="@array/tipo_tarea"
+            android:entryValues="@array/tipo_tarea" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
