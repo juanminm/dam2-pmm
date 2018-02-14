@@ -9,7 +9,8 @@ public class Player {
     private String name;
     private double money;
 
-    public Player(String name, double money) {
+    public Player(long id, String name, double money) {
+        this.id = id;
         this.name = name;
         this.money = money;
     }
