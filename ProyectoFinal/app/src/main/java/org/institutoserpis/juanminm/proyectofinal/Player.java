@@ -3,7 +3,7 @@ package org.institutoserpis.juanminm.proyectofinal;
 import java.io.Serializable;
 
 /**
- * Created by juamar on 2/02/18.
+ * @author Juan Miguel Navarro Martínez
  */
 
 public class Player implements Serializable {

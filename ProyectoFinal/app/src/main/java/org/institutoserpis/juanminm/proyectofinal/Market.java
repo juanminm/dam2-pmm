@@ -1,7 +1,7 @@
 package org.institutoserpis.juanminm.proyectofinal;
 
 /**
- * Created by juamar on 2/02/18.
+ * @author Juan Miguel Navarro Martínez
  */
 
 public class Market {

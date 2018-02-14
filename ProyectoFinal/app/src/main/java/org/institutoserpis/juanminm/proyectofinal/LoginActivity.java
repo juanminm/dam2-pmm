@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+/**
+ * @author Juan Miguel Navarro Martínez
+ */
+
 public class LoginActivity extends AppCompatActivity {
 
     public static final String LOGGED_PLAYER = "org.institutoserpis.juanminm.proyectofinal.LOGIN_PLAYER";
