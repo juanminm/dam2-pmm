@@ -68,15 +68,9 @@ public class DatabaseHelper {
         mDbHelper.close();
     }
 
-    public Cursor getItems(String table, String[] columns, String selection, String[] selArgs, String orderBy) {
-        return mDb.query(
-                table,
-                columns,
-                selection,
-                selArgs,
-                null,
-                null,
-                orderBy);
+    public Cursor getItems(String table, String[] columns, String selection, String[] selArgs,
+            String orderBy) {
+        return mDb.query(table, columns, selection, selArgs, null, null, orderBy);
     }
 
     public long insertItem(String table, String[][] data) {
