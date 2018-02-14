@@ -23,6 +23,7 @@ public final class Globals {
 
     // Table Inventory
     public static final String TABLE_INVENTORY_NAME = "inventory";
+    public static final String TABLE_INVENTORY_FIELD_ID = "id";
     public static final String TABLE_INVENTORY_FIELD_PLAYER = "player_id";
     public static final String TABLE_INVENTORY_FIELD_ITEM = "item_id";
     public static final String TABLE_INVENTORY_FIELD_QUANTITY = "quantity";
@@ -61,10 +62,12 @@ public final class Globals {
 
     public static final String CREATE_TABLE_INVENTORY = String.format(
             "CREATE TABLE IF NOT EXISTS %s (" +
+                    "%s INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "%s INTEGER NOT NULL REFERENCES %s (%s), " +
                     "%s INTEGER NOT NULL REFERENCES %s (%s), " +
                     "%s INTEGER NOT NULL)",
             TABLE_INVENTORY_NAME,
+            TABLE_INVENTORY_FIELD_ID,
             TABLE_INVENTORY_FIELD_PLAYER,
             TABLE_PLAYER_NAME,
             TABLE_PLAYER_FIELD_ID,
