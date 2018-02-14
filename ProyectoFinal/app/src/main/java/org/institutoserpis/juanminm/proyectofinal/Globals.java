@@ -98,4 +98,17 @@ public final class Globals {
             TABLE_MARKET_FIELD_PRICE_UNIT,
             TABLE_MARKET_FIELD_TYPE
     );
+
+    public static final String FILL_TABLE_PLAYER =
+            "INSERT INTO Player (name, password, money) VALUES" +
+                    "('Player1', 'player1', 417623)," +
+                    "('Player3', 'player3', 942387)," +
+                    "('Player2', 'player2', 12293)," +
+                    "('Player4', 'player4', 78912374)," +
+                    "('Player5', 'player5', 32784692)," +
+                    "('Player6', 'player6', 8923748)," +
+                    "('Player7', 'player7', 564162)," +
+                    "('Player8', 'player8', 21525412)," +
+                    "('Player9', 'player9', 545641981)," +
+                    "('Player10', 'player10', 5489481);";
 }
