@@ -32,7 +32,7 @@ public class InventoryAdapter extends ArrayAdapter<Inventory> {
         DatabaseHelper dbHelper = new DatabaseHelper(context);
         ViewHolder holder = new ViewHolder();
         String[] columns = {Globals.TABLE_ITEM_FIELD_NAME};
-        String[] selArgs = {Long.toString(inventory.get(position).getItemId())};
+        String[] selArgs = {Long.toString(inventory.get(position).getItem().getId())};
         String itemName = "";
         Cursor cursor;
 

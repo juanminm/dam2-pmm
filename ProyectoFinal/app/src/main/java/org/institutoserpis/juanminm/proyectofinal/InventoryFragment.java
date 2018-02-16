@@ -1,8 +1,6 @@
 package org.institutoserpis.juanminm.proyectofinal;
 
-import android.content.Context;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -30,7 +28,7 @@ public class InventoryFragment extends Fragment {
     static InventoryFragment newInstance(Player player) {
         InventoryFragment f = new InventoryFragment();
         Bundle args = new Bundle();
-        args.putSerializable(PLAYER, player);// Mantenemos el numero para usarlo en cualquier momento.
+        args.putSerializable(PLAYER, player);
         f.setArguments(args);
         return f;
     }
@@ -42,7 +40,7 @@ public class InventoryFragment extends Fragment {
         Player player = (Player) getArguments().getSerializable(PLAYER);
 
         if (player != null) {
-            DatabaseHelper dbHelper = new DatabaseHelper(this.getContext());
+            DatabaseHelper dbHelper = new DatabaseHelper(getContext());
             Cursor cursor;
             inventoryList = new ArrayList<>();
 
@@ -51,7 +49,6 @@ public class InventoryFragment extends Fragment {
                     Globals.TABLE_INVENTORY_NAME,
                     new String[]{
                             Globals.TABLE_INVENTORY_FIELD_ID,
-                            Globals.TABLE_INVENTORY_FIELD_PLAYER,
                             Globals.TABLE_INVENTORY_FIELD_ITEM,
                             Globals.TABLE_INVENTORY_FIELD_QUANTITY
                     },
@@ -60,10 +57,32 @@ public class InventoryFragment extends Fragment {
                     null);
 
             while (cursor.moveToNext()) {
-                Inventory inventory = new Inventory(cursor.getLong(0), cursor.getLong(1),
-                        cursor.getLong(2), cursor.getInt(3));
+                long inventoryid = cursor.getLong(0);
+                long itemId = cursor.getLong(1);
+                int quantity = cursor.getInt(2);
+                Cursor cursor2;
+                Item item;
+
+                cursor2 = dbHelper.getItems(
+                        Globals.TABLE_ITEM_NAME,
+                        new String[]{
+                                Globals.TABLE_ITEM_FIELD_ID,
+                                Globals.TABLE_ITEM_FIELD_NAME
+                        },
+                        "id = ?",
+                        new String[]{Long.toString(itemId)},
+                        null);
+
+                cursor2.moveToFirst();
+
+                item = new Item(cursor2.getLong(0), cursor.getString(1));
+                cursor2.close();
+
+                Inventory inventory = new Inventory(inventoryid, player,
+                        item, quantity);
                 inventoryList.add(inventory);
             }
+            cursor.close();
             dbHelper.close();
         }
     }

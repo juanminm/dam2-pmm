@@ -6,17 +6,17 @@ package org.institutoserpis.juanminm.proyectofinal;
 
 public class Market {
     private long id;
-    private long playerId;
-    private long itemId;
+    private Player player;
+    private Item item;
     private int units;
     private double priceUnit;
     private String type;
 
-    public Market(long id, long playerId, long itemId, int units, double price_unit,
+    public Market(long id, Player player, Item item, int units, double price_unit,
                   String type) {
         this.id = id;
-        this.playerId = playerId;
-        this.itemId = itemId;
+        this.player = player;
+        this.item = item;
         this.units = units;
         this.priceUnit = price_unit;
         this.type = type;
@@ -26,12 +26,12 @@ public class Market {
         return id;
     }
 
-    public long getPlayerId() {
-        return playerId;
+    public Player getPlayer() {
+        return player;
     }
 
-    public long getItemId() {
-        return itemId;
+    public Item getItem() {
+        return item;
     }
 
     public int getUnits() {
