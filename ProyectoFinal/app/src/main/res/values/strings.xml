@@ -3,4 +3,7 @@
     <string name="login_activity_username">Nombre de usuario</string>
     <string name="login_activity_password">Contraseña</string>
     <string name="login_activity_login">Conectarse</string>
+    <string name="fragment_market_create_sell_order">Create sell order</string>
+    <string name="menu_sellers_list_buy">Buy item</string>
+    <string name="menu_buyers_list_sell">Sell item</string>
 </resources>

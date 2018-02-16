@@ -5,15 +5,18 @@ package org.institutoserpis.juanminm.proyectofinal;
  */
 
 public class Market {
+    public static final int MARKET_TYPE_BUY = 0;
+    public static final int MARKET_TYPE_SELL = 1;
+
     private long id;
     private Player player;
     private Item item;
     private int units;
     private double priceUnit;
-    private String type;
+    private int type;
 
     public Market(long id, Player player, Item item, int units, double price_unit,
-                  String type) {
+                  int type) {
         this.id = id;
         this.player = player;
         this.item = item;
@@ -50,11 +53,11 @@ public class Market {
         this.priceUnit = priceUnit;
     }
 
-    public String getType() {
+    public int getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(int type) {
         this.type = type;
     }
 }
