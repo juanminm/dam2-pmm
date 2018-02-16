@@ -80,7 +80,7 @@ public final class Globals {
 
     public static final String CREATE_TABLE_MARKET = String.format(
             "CREATE TABLE IF NOT EXISTS %s (" +
-                    "%s INTEGER NOT NULL, " +
+                    "%s INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "%s INTEGER NOT NULL REFERENCES %s (%s), " +
                     "%s INTEGER NOT NULL REFERENCES %s (%s), " +
                     "%s INTEGER NOT NULL, " +
